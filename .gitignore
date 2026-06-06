@@ -43,3 +43,4 @@ Thumbs.db
 __pycache__/
 .pytest_cache/
 output/
+hf_token
