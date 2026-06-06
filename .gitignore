@@ -1,0 +1,45 @@
+# Build artifacts
+build/
+bin/
+obj/
+dist/
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.a
+*.lib
+*.so
+*.dll
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# Compiler specific
+*.pdb
+*.ilk
+
+.venv/
+__pycache__/
+.pytest_cache/
+output/
