@@ -206,17 +206,19 @@ def generate_single_text_image(text: str, font_path: str, output_path: str = def
     
     unique_id = random.randint(10000, 99999)
     output_file_path = os.path.join(output_path,mode, f"{stripped_font_name}_{unique_id}.png")
+    relative_file_path = os.path.relpath(output_file_path, output_path)
+    
     canvas.save(output_file_path)
     
     # Fixed: Append a new dictionary payload to the collection list
     if mode == 'train':
       train_output_data.append({
-          "path": output_file_path,
+          "path": relative_file_path,
           "text": text
       })
     else:
       test_output_data.append({
-          "path": output_file_path,
+          "path": relative_file_path,
           "text": text
       })
     
