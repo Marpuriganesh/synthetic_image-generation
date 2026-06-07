@@ -179,6 +179,7 @@ def generate_single_text_image(text: str, font_path: str, output_path: str = def
     try:
         font = ImageFont.truetype(font_path, size=32)
     except Exception as e:
+        print(f"Failed to load font: {e}")
         return
 
     e_w, e_h, left, top = get_text_dimensions(text, font)
